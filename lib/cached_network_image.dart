@@ -56,7 +56,7 @@ class CachedNetworkImage extends StatefulWidget {
         assert(matchTextDirection != null),
         super(key: key);
 
-  final Function getDownloadUrl;
+  final Future<String> getDownloadUrl;
 
   /// Widget displayed while the target [imageUrl] is loading.
   final Widget placeholder;
@@ -443,7 +443,7 @@ class CachedNetworkImageProvider
       : assert(url != null),
         assert(scale != null);
 
-  final Function getDownloadUrl;
+  final Future<String> getDownloadUrl;
 
   /// Web url of the image to load
   final String url;
